@@ -62,6 +62,6 @@ app.use((err, req, res, next) => {
     },
   });
 });
-app.listen(2000 || process.env.PORT, () => {
+app.listen(process.env.PORT || 2000, () => {
   console.log("The port 2000 is ready to start....");
 });

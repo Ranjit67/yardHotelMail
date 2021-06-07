@@ -30,7 +30,7 @@ router.post("/register", async (req, res, next) => {
       },
     });
     const mailOption = {
-      from: `sahooranjit519@gmail.com`,
+      from: `noreply.yardhotel@gmail.com`,
       to: email,
       subject: "Thank you for register on Yard Hotel",
       html: `<p>Yor register successfully please touch with chanel manager,</p><br></p> And log in with Following password</p><br><h4>${password}</h4>`,

@@ -1,0 +1,87 @@
+### register
+POST http://localhost:2000/yardHotel/register
+Content-Type: application/json
+
+   {
+    "about": {
+      "websiteURL": "",
+      "phoneNumber": "",
+      "email": "",
+      "whatsapp": "",
+      "logo": {
+        "uri": "",
+        "ref": ""
+      },
+      "description": ""
+    },
+    "features": {
+      "feature_id": {
+        "name": "",
+        "uri": ""
+      },
+      "another_feature_id": {
+        "name": "",
+        "uri": ""
+      }
+    },
+    "photos": {
+      "photo_unique_id": {
+        "uri": "",
+        "ref": ""
+      },
+      "another_photo_unique_id": {
+        "uri": "",
+        "ref": ""
+      }
+    },
+    "ownerInfo": {
+      "email": "bhargabau@gmail.com",
+      "password": "bhargabau@gmail.com",
+      "displayName": "",
+      "photoURL": "",
+      "phoneNumber": "",
+      "uid": "",
+      "emailVerified": "",
+      "metadata": {
+        "creationTime": "",
+        "lastSignInTime": ""
+      },
+      "fcmToken": ""
+    },
+    "location": {
+      "latitude": "",
+      "longitude": ""
+    },
+    "roomTypes": {
+      "room_type_unique_id": {
+        "name": "",
+        "numberOfRooms": "",
+        "price": "",
+        "photos": {
+          "photo_unique_id": {
+            "uri": "",
+            "ref": ""
+          },
+          "another_photo_unique_id": {
+            "uri": "",
+            "ref": ""
+          }
+        }
+      },
+      "another_room_type_unique_id": {
+        "name": "",
+        "numberOfRooms": "",
+        "price": "",
+        "photos": {
+          "photo_unique_id": {
+            "uri": "",
+            "ref": ""
+          },
+          "another_photo_unique_id": {
+            "uri": "",
+            "ref": ""
+          }
+        }
+      }
+    }
+  }

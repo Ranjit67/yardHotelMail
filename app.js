@@ -1,7 +1,9 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const createError = require("http-errors");
+const { auth, database } = require("./firebase/firebaseCredential");
 const app = express();
+
 app.use(express.json());
 //cors set
 
@@ -48,7 +50,13 @@ app.post("/mail", async (req, res, next) => {
   //mail end
   res.send({ data: send });
 });
+// send data base
 
+//noreply.yardhotel@gmail.com
+//8249832295
+
+const yardHotelRegister = require("./module/register");
+app.use("/yardHotel", yardHotelRegister);
 app.use(async (req, res, next) => {
   next(createError.NotFound());
 });

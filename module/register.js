@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 const { auth, database } = require("../firebase/firebaseCredential");
+const createError = require("http-errors");
 
 const userDataSave = async (data, uid) => {
   const dbRef = `Hotels/${uid}`;

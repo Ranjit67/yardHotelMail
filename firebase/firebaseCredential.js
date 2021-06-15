@@ -3,14 +3,14 @@ var firebase = require("firebase");
 //firebase setup
 
 const fire = firebase.initializeApp({
-  apiKey: "AIzaSyB6ma9b3OjBRbvpBYDescpluEyeiw-Lc14",
-  authDomain: "yard-hotel.firebaseapp.com",
-  databaseURL: "https://yard-hotel-default-rtdb.firebaseio.com",
-  projectId: "yard-hotel",
-  storageBucket: "yard-hotel.appspot.com",
-  messagingSenderId: "288194258163",
-  appId: "1:288194258163:web:e76b5f0aa87d0ff9a98386",
-  measurementId: "G-9WMSYP8RG0",
+  apiKey: "AIzaSyBSTMkL5fIfPVvAg3WdesfDvEDMT__Dvzc",
+  authDomain: "yardhotel-bbec3.firebaseapp.com",
+  databaseURL: "https://yardhotel-bbec3.firebaseio.com",
+  projectId: "yardhotel-bbec3",
+  storageBucket: "yardhotel-bbec3.appspot.com",
+  messagingSenderId: "623052437842",
+  appId: "1:623052437842:web:5812a395034c9dfb9e628b",
+  measurementId: "G-45Q0G1XYLD",
 });
 
 const auth = fire.auth();

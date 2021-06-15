@@ -5,7 +5,7 @@ const { auth, database } = require("../firebase/firebaseCredential");
 const createError = require("http-errors");
 
 const userDataSave = async (data, uid) => {
-  const dbRef = `Hotels/${uid}`;
+  const dbRef = `hotelsData/${uid}`;
   data.ownerInfo.uid = uid;
   await database.ref(dbRef).set(data);
   return 1;
@@ -34,7 +34,7 @@ router.post("/register", async (req, res, next) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "noreply.yardhotel@gmail.com",
+        user: "noreply.searchingyard@gmail.com",
         pass: "8249832295",
       },
     });

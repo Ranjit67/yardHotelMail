@@ -13,29 +13,28 @@ const userDataSave = async (data, uid) => {
 
 router.post("/register", async (req, res, next) => {
   try {
-    const { about, features, ownerInfo, location, roomTypes, photos } =
-      req.body;
+    const hotelObject = req.body;
 
-    const email = ownerInfo?.email;
-    const password = ownerInfo?.password;
+    const email = hotelObject?.ownerInfo?.email;
+    const password = hotelObject?.ownerInfo?.password;
 
     if (!email || !password)
       throw createError.BadRequest("Email and password is important...");
     const response = await auth.createUserWithEmailAndPassword(email, password);
-    const hotelObject = {
-      about,
-      features,
-      ownerInfo,
-      location,
-      roomTypes,
-      photos,
-    };
+    // const hotelObject = {
+    //   about,
+    //   features,
+    //   ownerInfo,
+    //   location,
+    //   roomTypes,
+    //   photos,
+    // };
     const userInsert = await userDataSave(hotelObject, response.user.uid);
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "noreply.searchingyard@gmail.com",
-        pass: "8249832295",
+        user: "noreply.yardhotel.in@gmail.com",
+        pass: "8825163537",
       },
     });
     const mailOption = {

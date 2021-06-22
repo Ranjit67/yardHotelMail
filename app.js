@@ -22,19 +22,20 @@ app.use(function (req, res, next) {
 
   next();
 });
+let transport = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "noreply.kingdomexpo.org@gmail.com",
+    pass: "kingdomexpo123",
+  },
+});
 app.post("/mail", async (req, res, next) => {
   const { displayFromSideName, toEmail, body, subject, cc, bcc, poster } =
     req.body;
   if (toEmail.length < 1)
     throw createError.BadRequest("You have to enter sender email... ");
   //mail property
-  let transport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "noreply.kingdomexpo.org@gmail.com",
-      pass: "kingdomexpo123",
-    },
-  });
+
   //mail option
   const mailOption = {
     from: `${displayFromSideName} <foo@example.com>`,

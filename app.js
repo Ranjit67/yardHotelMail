@@ -49,7 +49,7 @@ app.post("/mail", async (req, res, next) => {
   const send = await transport.sendMail(mailOption);
   //mail option end
   //mail end
-  res.send({ data: send });
+  res.send({ data: "E-mail send success..." });
 });
 // send data base
 
